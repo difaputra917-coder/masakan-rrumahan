@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dapur Rumahan - Resep Masakan Lezat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍳</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <span class="logo-icon">🍳</span>
+                    <div class="logo-text">
+                        <h1>Dapur Rumahan</h1>
+                        <p>Resep Masakan Lezat ala dapur Kita</p>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Cari resep...">
+                    <button id="searchBtn">🔍</button>
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link active" data-category="all">Beranda</a></li>
+                    <li><a href="#" class="nav-link" data-category="nusantara">Masakan Nusantara</a></li>
+                    <li><a href="#" class="nav-link" data-category="mudah">Resep Mudah</a></li>
+                    <li><a href="#" class="nav-link" data-category="camilan">Camilan</a></li>
+                    <li><a href="#" class="nav-link" data-category="minuman">Minuman</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Selamat Datang di Dapur Rumahan</h2>
+                <p>Temukan berbagai resep masakan rumahan yang lezat dan mudah dibuat untuk keluarga tercinta</p>
+                <a href="#resep" class="btn-explore">Jelajahi Resep</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Featured Recipes -->
+            <section class="featured-section">
+                <h2 class="section-title">⭐ Resep Pilihan</h2>
+                <div class="featured-grid" id="featuredRecipes">
+                    <!-- Featured recipes will be inserted here -->
+                </div>
+            </section>
+
+            <!-- Latest Recipes -->
+            <section class="latest-section" id="resep">
+                <h2 class="section-title">📝 Resep Terbaru</h2>
+                <div class="recipe-grid" id="recipeGrid">
+                    <!-- Recipe cards will be inserted here -->
+                </div>
+            </section>
+
+            <!-- Categories Section -->
+            <section class="categories-section">
+                <h2 class="section-title">🏷️ Kategori</h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="nusantara">
+                        <span class="category-icon">🥘</span>
+                        <h3>Masakan Nusantara</h3>
+                        <p>Resep tradisional Indonesia</p>
+                    </div>
+                    <div class="category-card" data-category="mudah">
+                        <span class="category-icon">⚡</span>
+                        <h3>Resep Mudah</h3>
+                        <p>Makanan praktis dan cepat</p>
+                    </div>
+                    <div class="category-card" data-category="camilan">
+                        <span class="category-icon">🍪</span>
+                        <h3>Camilan</h3>
+                        <p>Kue dan camilan lezat</p>
+                    </div>
+                    <div class="category-card" data-category="minuman">
+                        <span class="category-icon">🥤</span>
+                        <h3>Minuman</h3>
+                        <p>Minuman segar dan sehat</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tips Section -->
+            <section class="tips-section">
+                <h2 class="section-title">💡 Tips Memasak</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <span class="tip-icon">🔪</span>
+                        <h3>Porsi yang Tepat</h3>
+                        <p>Saat memasak untuk keluarga, hitung porsi dengan tepat agar tidak boros atau kurang.</p>
+                    </div>
+                    <div class="tip-card">
+                        <span class="tip-icon">🧄</span>
+                        <h3>Bawang Putih Empuk</h3>
+                        <p>Cincang halus bawang putih agar aromanya lebih keluar dan masakan lebih lezat.</p>
+                    </div>
+                    <div class="tip-card">
+                        <span class="tip-icon">🧂</span>
+                        <h3>Menyedap yang Benar</h3>
+                        <p>Tambahkan garam dan penyedap sedikit demi sedikit sambil Dicicipi agar tidak terlalu asin.</p>
+                    </div>
+                    <div class="tip-card">
+                        <span class="tip-icon">🍳</span>
+                        <h3>Api yang Sesuai</h3>
+                        <p>Gunakan api besar untuk menggoreng dan api kecil untuk merebus agar hasil maksimal.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>📬 Langganan Resep Terbaru</h2>
+                <p>Dapatkan resep-resep lezat langsung ke email Anda setiap minggu</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Masukkan email Anda..." required>
+                    <button type="submit">Berlangganan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🍳</span>
+                        <h3>Dapur Rumahan</h3>
+                    </div>
+                    <p>Situs berbagi resep masakan rumahan favorit keluarga. Kami percaya bahwa makanan terlezat adalah yang dibuat dengan cinta di rumah.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kategori Resep</h4>
+                    <ul>
+                        <li><a href="#">Masakan Nusantara</a></li>
+                        <li><a href="#">Resep Mudah</a></li>
+                        <li><a href="#">Camilan</a></li>
+                        <li><a href="#">Minuman</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📸</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📌</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dapur Rumahan. Dibuat dengan ❤️ untuk para ibu rumah tangga Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Recipe Detail Modal -->
+    <div class="modal" id="recipeModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-category" id="modalCategory"></span>
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-meta">
+                        <span>⏱️ <span id="modalTime"></span></span>
+                        <span>👥 <span id="modalServings"></span></span>
+                        <span class="modal-difficulty" id="modalDifficulty"></span>
+                    </div>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <div class="modal-ingredients">
+                        <h3>📋 Bahan-bahan:</h3>
+                        <ul id="modalIngredients"></ul>
+                    </div>
+                    <div class="modal-instructions">
+                        <h3>👨‍🍳 Cara Memasak:</h3>
+                        <ol id="modalInstructions"></ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
